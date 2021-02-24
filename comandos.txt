@@ -1,0 +1,52 @@
+-------------Ejericicio 1
+num=[1 5];
+a=[1 0.1];
+b=[1 3];
+den=conv(a,b);
+G=tf(num,den);
+bode(G)
+allmargin(G)
+---------------Ejercicio 2
+num=[50];
+a=[1 10];
+b=[1 6];
+b =conv(b,b);
+den=conv(a,b);
+G=tf(num,den);
+bode(G);
+allmargin(G)
+----------Ejercicio 3
+num=[1 3];
+a=[1];
+b=[1 1];
+c=[.5 1];
+den=conv(a,b);
+den=conv(den,c);
+G=tf(num,den);
+bode(G);
+allmargin(G)
+----juntas
+num=[1 5];
+a=[1 0.1];
+b=[1 3];
+den=conv(a,b);
+G=tf(num,den);
+bode(G)
+hold on
+num=[50];
+a=[1 10];
+b=[1 6];
+b = conv(b,b);
+den=conv(a,b);
+G=tf(num,den);
+bode(G)
+hold on
+num=[1 3];
+a=[1];
+b=[1 1];
+c=[.5 1];
+den=conv(a,b);
+den=conv(den,c);
+G=tf(num,den);
+bode(G)
+hold on
